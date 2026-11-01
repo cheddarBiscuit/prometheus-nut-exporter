@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated Rust to 1.99.1, Alpine to 3.24 and all crate dependencies (tokio, url, regex, env_logger, lazy_static, etc.).
+- Reduced hyper to its HTTP/1 server features (HTTP/2 is not needed by the exporter).
+- Updated GitHub Actions and added Dependabot for Cargo, Actions and Docker updates.
+
 ### Deprecated
 
 ### Removed
@@ -17,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 ### Security
+
+- Fixed all `cargo audit` vulnerabilities (9 at the time of the update), including the `h2` advisory RUSTSEC-2026-0258 by no longer building HTTP/2 support.
 
 ## [1.2.1] - 2022-08-03
 
