@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Rust to 1.99.1, Alpine to 3.24 and all crate dependencies (tokio, url, regex, env_logger, lazy_static, etc.).
 - Reduced hyper to its HTTP/1 server features (HTTP/2 is not needed by the exporter).
 - Updated GitHub Actions and added Dependabot for Cargo, Actions and Docker updates.
+- Publish images to GitHub Container Registry (`ghcr.io/cheddarbiscuit/prometheus-nut-exporter`) instead of Docker Hub, merging the two publish jobs.
 
 ### Deprecated
 
