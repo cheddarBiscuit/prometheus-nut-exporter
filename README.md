@@ -3,7 +3,6 @@
 [![GitHub release](https://img.shields.io/github/v/release/HON95/prometheus-nut-exporter?label=Version)](https://github.com/HON95/prometheus-nut-exporter/releases)
 [![CI](https://github.com/HON95/prometheus-nut-exporter/workflows/CI/badge.svg?branch=master)](https://github.com/HON95/prometheus-nut-exporter/actions?query=workflow%3ACI)
 [![FOSSA status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FHON95%2Fprometheus-nut-exporter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FHON95%2Fprometheus-nut-exporter?ref=badge_shield)
-[![Docker pulls](https://img.shields.io/docker/pulls/hon95/prometheus-nut-exporter?label=Docker%20Hub)](https://hub.docker.com/r/hon95/prometheus-nut-exporter)
 
 ![Dashboard](https://grafana.com/api/dashboards/14371/images/10335/image)
 
@@ -26,8 +25,8 @@ version: "3.7"
 
 services:
   nut-exporter:
-    # Stable v1
-    image: hon95/prometheus-nut-exporter:1
+    # Published from this fork on every push to master (:latest)
+    image: ghcr.io/cheddarbiscuit/prometheus-nut-exporter:latest
     environment:
       - TZ=Europe/Oslo
       - HTTP_PATH=/metrics
